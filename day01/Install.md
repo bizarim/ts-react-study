@@ -7,5 +7,5 @@ npx create-react-app sample001 --typescript
 ```
 yarn run build
 yarn run start
-yarn run e...
+yarn run test
 ```
