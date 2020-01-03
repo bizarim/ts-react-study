@@ -39,10 +39,6 @@
     Hook (개념만 일단 class 기반)
     typescript
     tslint
-    - redux
-    - reducer
-    - Babel
-    - Webpack
 ```
 
 ## 프로젝트 생성
@@ -50,6 +46,12 @@
 ```
     1. create-react-app 설치
     2. package 개별 설치
+```
+
+## 프로젝트 생성
+```
+    - Babel
+    - Webpack
 ```
 
 ## 참고 링크
