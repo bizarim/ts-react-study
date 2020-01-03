@@ -35,23 +35,26 @@
     mac
     yarn
     vscode
-    react 16.8.0
+    react 16.12.0
     Hook (개념만 일단 class 기반)
     typescript
     tslint
 ```
 
-## 프로젝트 생성
+## 프로젝트 생성 1
 [자세한 내용 보기](Install.md)
 ```
-    1. create-react-app 설치
-    2. package 개별 설치
+    CRA (create-react-app) 설치
 ```
 
-## 프로젝트 생성
+## 프로젝트 생성 2
+[자세한 내용 보기](Package.md)
 ```
-    - Babel
-    - Webpack
+    - typescript
+    - tslint
+    - react
+    - babel
+    - webpack
 ```
 
 ## 참고 링크
@@ -59,4 +62,10 @@
 https://reactjs.org/
 https://redux.js.org/
 https://react-etc.vlpt.us/
+```
+
+## 책
+```
+리액트를 다루는 기술
+모던 웹을 위한 HTML5+CSS3 바이블
 ```
