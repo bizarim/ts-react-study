@@ -14,10 +14,11 @@ yarn init -y
 
 ### typescirpt
 ```
-tsc --init
 yarn add typescript
+```
 
-tsconfig.json
+파일 추가: tsconfig.json
+```
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -41,6 +42,10 @@ tsconfig.json
     "dist"
   ]
 }
+```
+OR
+```
+tsc --init // 파일 생성
 ```
 ### tslint
 ```
@@ -68,8 +73,10 @@ yarn add @babel/preset-env
 yarn add @babel/preset-react
 yarn add @babel/preset-typescript
 yarn add babel-loader
+```
 
-.babelrc
+파일추가: .babelrc
+```
 {
   "presets": [
     "@babel/env",
@@ -94,12 +101,15 @@ yarn add webpack
 yarn add webpack-cli
 yarn add webpack-dev-server
 
+```
 
-webpack.config.js
+파일 추가: webpack.config.js
+```
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const APP_PATH = path.resolve(__dirname, 'src');
+const PUBLIC_PATH = 'public';
 
 module.exports = {
   entry: APP_PATH,
@@ -118,7 +128,7 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: path.join(APP_PATH, 'index.html') }),
+    new HtmlWebpackPlugin({ inject: true, template: path.join(PUBLIC_PATH, 'index.html') }),
     new ForkTsCheckerWebpackPlugin(),
   ]
 };
@@ -127,21 +137,38 @@ module.exports = {
 
 ### add scripts
 ```
-  "scripts": {
+  ,"scripts": {
     "build": "webpack --progress --colors --mode=production",
     "start": "webpack-dev-server --config webpack.config.js --progress --colors --open --mode=development"
   }
 ```
 
 
-### package.json
+### .gitignore
 ```
-  "scripts": {
-    "build": "webpack --progress --colors --mode=production",
-    "start": "webpack-dev-server --config webpack.config.js --progress --colors --open --mode=development"
-  },
-package.json란?
-이 파일 안에서 알 수 있는 정보는?
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 ```
 
 
