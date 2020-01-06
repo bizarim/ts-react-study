@@ -7,8 +7,8 @@
 
 ### 프로젝트 생성
 ```
-mkdir sample002
-cd sample002
+mkdir 002-create-without-cra
+cd 002-create-without-cra
 yarn init -y
 ```
 

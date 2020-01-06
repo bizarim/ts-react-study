@@ -1,6 +1,6 @@
 ### create-react-app 설치
 ```
-npx create-react-app sample001 --typescript
+npx create-react-app 001-create-with-cra --typescript
 ```
 
 ## package script
