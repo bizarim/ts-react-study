@@ -88,7 +88,26 @@ practice 폴더안에 Hello.ts를 생성
 │  └─main.ts
 │
 ```
-#### 2. [contents](Contents.md)
+
+#### 2. 문법
+##### 1. [기본타입](01.PrimitiveType.md)
+- boolean
+- number
+- string
+- array
+- tuple
+- enum
+- any
+- void
+- null & undefined
+- never
+
+##### 2. 변수선언
+- var
+- let
+- const
+
+#### 3. [contents](Contents.md)
 내용 따라 해보기
 
 
