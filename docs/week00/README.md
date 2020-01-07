@@ -76,9 +76,19 @@ yarn run start
 ```
 
 ### - ts-practice
+#### 1. Hello.ts 파일 생성
+practice 폴더안에 Hello.ts를 생성
 ```
-
+├─dist
+├─node_modules
+├─src
+│  ├─practice
+│  │  ├─Hello.ts
+│  │
+│  └─main.ts
+│
 ```
+#### 2. [contents](Contents.md)
 
 ### 책
 ```
