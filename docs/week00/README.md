@@ -107,9 +107,33 @@ practice 폴더안에 Hello.ts를 생성
 - let
 - const
 
-#### 3. [contents](Contents.md)
-내용 따라 해보기
+##### 3. [제어문](03.Statements.md)
+- if, switch
+- for, while
 
+##### 4. [연산자](04.Operator.md)
+- 산술 연산자
+- 비교 연산자
+- 논리 연산자
+- 3항 연산자
+- 전개 연산자
+
+##### 5. [디스트럭처링](05.Destructuring.md)
+- 간략설명
+
+##### 6. [함수](06.Function.md)
+- 선언적 함수
+- 익명 함수
+- 콜백 함수
+
+##### 7. [인터페이스](07.Interface.md)
+- todo
+
+##### 8. [클래스](08.Class.md)
+- todo
+
+#### [따라해보기](Contents.md)
+내용 따라 해보기
 
 ### 책
 ```
