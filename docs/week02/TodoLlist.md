@@ -24,4 +24,6 @@ yarn add classnames
 yarn add @types/classnames
 yarn add open-color
 ```
-
+```
+Beautify css/sass/scss/less
+``
