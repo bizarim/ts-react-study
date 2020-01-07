@@ -1,5 +1,4 @@
-## keywords
-[자세한 내용 보기](Keywords.md)
+## [keywords](Keywords.md)
 ```
     객체
     모듈화

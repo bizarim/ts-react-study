@@ -1,5 +1,9 @@
 # ts-react-study
 
+## week00
+   - ts-setting
+   - ts-practice
+
 ## week01
    - 환경설정
    - react 학습을 위한 기본 개념 익히기
@@ -9,8 +13,6 @@
    - [자세한 내용은 다음을 참조](docs/week01/README.md)
 
 ## week02
-   - typescript
-      - base
    - react
       - props
       - state
