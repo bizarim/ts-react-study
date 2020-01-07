@@ -15,6 +15,7 @@ TSLint (deprecated)
 ```
 vscode
 {
+    "typescript.referencesCodeLens.enabled": true, // reference
     "tslint.autoFixOnSave": true,   // 저장시 자동수정
     "explorer.compactFolders": false,   // 폴더 collapsed default true
 }

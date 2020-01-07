@@ -15,12 +15,13 @@ yarn add tslint
 
 ### sass 적용
 ```
-yarn add node-sass classnames @types/classnames
+yarn add node-sass classnames @types/classnames open-color
 ```
 OR
 ```
 yarn add node-sass
 yarn add classnames
 yarn add @types/classnames
+yarn add open-color
 ```
 
