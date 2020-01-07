@@ -102,7 +102,7 @@ practice 폴더안에 Hello.ts를 생성
 - null & undefined
 - never
 
-##### 2. 변수선언
+##### 2. [변수선언](02.VariableDeclarations.md)
 - var
 - let
 - const
