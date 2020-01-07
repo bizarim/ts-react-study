@@ -1,0 +1,18 @@
+{
+  "name": "000-ts-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p .",
+    "exec": "ts-node ./src/main.ts",
+    "build": "yarn run lint && tsc",
+    "start": "yarn run build && yarn run exec"
+  }
+}
