@@ -45,7 +45,6 @@ const App: React.FC<Props> = () => {
     };
     const handleToggle = (id: number) => {
         // id로 배열의 인덱스를 찾습니다.
-
         const index = state.todos.findIndex(todo => todo.id === id);
 
         // 찾은 데이터의 done 값을 반전시킵니다.
