@@ -3,7 +3,7 @@
 npx create-react-app 001-create-with-cra --typescript
 ```
 
-## package.json 수정
+### package.json 수정
 ```
 "browserslist": [
     ">0.2%",
@@ -12,7 +12,7 @@ npx create-react-app 001-create-with-cra --typescript
   ]
 ```
 
-## package script
+### package script
 ```
 yarn run build
 yarn run start
