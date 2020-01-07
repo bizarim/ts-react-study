@@ -1,5 +1,6 @@
 ## ts-react-study
 타입스크립트 & 리액트 스터디를 위해 작성했습니다.
+대상: 언어를 한번도 사용해보지 않은 사람, 개발자가 아닌사람
 
 ### - [Week 0](docs/week00/README.md)
    - ts-setting
