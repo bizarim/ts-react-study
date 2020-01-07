@@ -89,6 +89,8 @@ practice 폴더안에 Hello.ts를 생성
 │
 ```
 #### 2. [contents](Contents.md)
+내용 따라 해보기
+
 
 ### 책
 ```
