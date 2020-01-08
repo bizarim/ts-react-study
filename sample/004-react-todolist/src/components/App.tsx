@@ -31,7 +31,7 @@ const App: React.FC<Props> = () => {
 
     const handleInsert = () => {
         if (state.input === '') return;
-        // 새 데이터 객체 만들기
+
         const newTodo: TodoListData = {
             id: getId(),
             text: state.input,
@@ -44,17 +44,13 @@ const App: React.FC<Props> = () => {
         });
     };
     const handleToggle = (id: number) => {
-        // id로 배열의 인덱스를 찾습니다.
         const index = state.todos.findIndex(todo => todo.id === id);
 
-        // 찾은 데이터의 done 값을 반전시킵니다.
         const toggled: TodoListData = {
             ...state.todos[index],
             done: !state.todos[index].done
         };
 
-        // slice를 사용하여 우리가 찾은 index 전후의 데이터들을 복사합니다.
-        // 그리고 그 사이에는 변경된 todo 객체를 넣어줍니다.
         setState({
             input: '',
             todos: [
