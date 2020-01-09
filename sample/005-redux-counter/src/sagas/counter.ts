@@ -20,47 +20,26 @@ export default function* counterSaga() {
 }
 
 function* createCounter$(action: CreateCounterAction) {
-    try {
-        const { type, payload } = action;
-        yield put({ type: type, payload: payload });
-    } catch (e) {
-        console.log(e);
-    }
+    const { type, payload } = action;
+    console.log(type);
 }
 
 function* removeCounter$(action: RemoveCounterAction) {
-    try {
-        const { type } = action;
-        yield put({ type: type });
-    } catch (e) {
-        console.log(e);
-    }
+    const { type } = action;
+    console.log(type);
 }
 
 function* incrementCounter$(action: IncrementCounterAction) {
-    try {
-        const { type, payload } = action;
-        yield put({ type: type, payload: payload });
-    } catch (e) {
-        console.log(e);
-    }
+    const { type, payload } = action;
+    console.log(type);
 }
 
 function* decrementCounter$(action: DecrementCounterAction) {
-    try {
-        const { type, payload } = action;
-        yield put({ type: type, payload: payload });
-    } catch (e) {
-        console.log(e);
-    }
+    const { type, payload } = action;
+    console.log(type);
 }
 
-
 function* setColorCounter$(action: SetColorCounterAction) {
-    try {
-        const { type, payload } = action;
-        yield put({ type: type, payload: payload });
-    } catch (e) {
-        console.log(e);
-    }
+    const { type, payload } = action;
+    console.log(type);
 }

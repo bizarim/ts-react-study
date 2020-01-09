@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import getRandomColor from '../lib/getRandomColor';
 import CounterList from '../components/counterList/CounterList';
-import { RootState } from '../reducers';
+import { AppState } from '../reducers';
 import { CounterActionTypes, incrementCounter, decrementCounter, setColorCounter } from '../actions/counter';
 
-const mapStateToProps = (state: RootState) => ({
-    counters: state.counter
+const mapStateToProps = (state: AppState) => ({
+    counters: state.counterReducer
 });
 
 const mapDispatchToProps = (dispatch: Dispatch<CounterActionTypes>) => ({

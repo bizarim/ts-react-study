@@ -1,6 +1,7 @@
 import React from 'react';
 import Counter from '../counter/Counter';
 import { CounterState } from '../../reducers/counter';
+import './CounterList.css';
 
 interface Props {
     counters: CounterState;
@@ -10,7 +11,7 @@ interface Props {
 }
 
 const CounterList: React.FC<Props> = ({ counters, onIncrement, onDecrement, onSetColor }: Props) => {
-    const list = counters.counters.map(
+    const list = counters.map(
         (counter, i) => (
             <Counter
                 key={i}
