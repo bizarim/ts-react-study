@@ -26,7 +26,7 @@ const TodoInput: React.FC<Props> = ({ value, setInput, onInsert }) => {
 
     const handleOnClick = () => {
         onInsert(value);
-        setInput(value);
+        setInput('');
     };
 
     return (
