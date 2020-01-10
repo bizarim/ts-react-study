@@ -1,4 +1,3 @@
-
 // [ Redux 만들기 ] step 1 : type과 action 정의
 
 // 1. type 정의

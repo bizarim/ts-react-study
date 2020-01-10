@@ -13,6 +13,4 @@ const mapDispatchToProps = (dispatch: Dispatch<TodoActioin>) => ({
     onRemove: (id: number) => dispatch(todoRemove(id))
 });
 
-const TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(TodoList);
-
-export default TodoListContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

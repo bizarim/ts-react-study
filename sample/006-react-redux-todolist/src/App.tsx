@@ -3,11 +3,7 @@ import PageTemplate from './components/pageTemplate';
 import TodoInputContainer from './containers/todoInput/TodoInputContainer';
 import TodoListContainer from './containers/todoList/TodoListContainer';
 
-interface Props {
-
-}
-
-const App: React.FC<Props> = () => {
+const App: React.FC = () => {
     return (
         <PageTemplate>
             <TodoInputContainer />

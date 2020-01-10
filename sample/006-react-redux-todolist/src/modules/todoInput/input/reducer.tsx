@@ -3,12 +3,12 @@ import { InputAction } from './action';
 // [ Redux 만들기 ] step 2 : state 정의 및 reducer 작성
 
 // 1. state 정의
-export type InputState = Readonly<{
+export type InputState = {
     /**
      * todo input value
      */
-    value: string;
-}>;
+    readonly value: string;
+};
 
 // 2. reducer 작성
 /**

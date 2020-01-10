@@ -12,6 +12,7 @@ interface Props {
 
 const TodoInput: React.FC<Props> = ({ value, setInput, onInsert }) => {
 
+    // 이렇게 코딩했을 떄 발생하는 문제점?
     const handleOnChange = (e: React.SyntheticEvent) => {
         const { value } = e.target as HTMLInputElement;
         setInput(value);
