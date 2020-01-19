@@ -1,22 +1,22 @@
+import { Chicken } from './Chicken';
+import { Goose } from './Goose';
+import { Cat } from './Cat';
+import { LivingThing } from './LivingThing';
 
-const len: number = 100;
-let arrNumber: number[] = [];
-let num: number = 0;
+const choco = new Chicken('choco');
+const coco = new Chicken('coco');
+const goo = new Goose('goo');
+const yaong = new Cat('yaong');
 
-for (let i: number = 2; i <= len; ++i) {
-    for (let j: number = 2; j <= len; ++j) {
-        // 1과 자기자신을 나눴지는 수 소수
-        if (i % j === 0) {
-            num = j;
-            break;
-        }
-    }
+const basket: Array<LivingThing> = [];
+basket.push(choco.Spwan());
+basket.push(coco.Spwan());
+basket.push(choco.Spwan());
+basket.push(coco.Spwan());
+basket.push(goo.Spwan());
+basket.push(yaong.Spwan());
 
-    if (i === num) {
-        arrNumber.push(i);
-    }
-}
-
-for (let i: number = 0; i < arrNumber.length; ++i) {
-    console.log(arrNumber[i]);
+console.log(basket.length);
+for (let i = 0; i < basket.length; ++i) {
+    console.log(basket[i].getName());
 }
