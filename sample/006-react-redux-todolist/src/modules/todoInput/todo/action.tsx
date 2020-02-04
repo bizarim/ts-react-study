@@ -1,3 +1,14 @@
+export const TODO_INSERT_REQUEST = 'TODO_INSERT_REQUEST';
+
+export interface TodoInsertRQAction {
+    type: typeof TODO_INSERT_REQUEST;
+    payload: { value: string };
+}
+
+export const todoInsertRQ = (value: string): TodoInsertRQAction => ({
+    type: TODO_INSERT_REQUEST,
+    payload: { value: value }
+});
 
 export const TODO_INSERT = 'TODO_INSERT';
 
@@ -38,4 +49,5 @@ export const todoRemove = (id: number): TodoRemoveAction => ({
 export type TodoActioin
     = TodoInsertAction
     | TodoToggleAction
-    | TodoRemoveAction;
+    | TodoRemoveAction
+    | TodoInsertRQAction;

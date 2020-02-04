@@ -23,7 +23,7 @@ let id: number = 1;
 const getId = () => { return ++id; };
 
 const todoReducer = (state: TodoListState = initialState, action: TodoActioin): TodoListState => {
-
+    console.log('todoReducer');
     switch (action.type) {
         case 'TODO_INSERT': {
             const newTodo = { id: getId(), text: action.payload.value, done: false };
