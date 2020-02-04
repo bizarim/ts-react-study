@@ -10,7 +10,7 @@ export interface TodoItemProps {
     onRemove: () => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ children, done, onRemove, onToggle }) => {
+const TodoItem: React.FC<TodoItemProps> = React.memo(({ children, done, onRemove, onToggle }) => {
     return (
         <div className={cx('todo-item')} onClick={onToggle}>
             <input className={cx('tick')} type='checkbox' checked={done} readOnly />
@@ -24,6 +24,6 @@ const TodoItem: React.FC<TodoItemProps> = ({ children, done, onRemove, onToggle 
             }}>[지우기]</div>
         </div>
     );
-};
+});
 
 export default TodoItem;

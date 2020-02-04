@@ -14,7 +14,7 @@ export interface TodoListProps {
     onRemove: (id: number) => void;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onRemove }) => {
+const TodoList: React.FC<TodoListProps> = React.memo(({ todos, onToggle, onRemove }) => {
 
     const todoList = todos.map(
         todo => (
@@ -33,6 +33,6 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onRemove }) => {
             {todoList}
         </div>
     );
-};
+});
 
 export default TodoList;
