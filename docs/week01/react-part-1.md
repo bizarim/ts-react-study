@@ -126,6 +126,7 @@ class React extends Display{
 1. JSX문법
 리액트에서는 JSX문법을 사용하는데, 이는 페이스북에서 만든 것으로 HTML과 비슷하게 생기고 비슷하게 사용하지만 전혀 다른 문법입니다.
 JSX에서는 꼭 지켜야할 규칙들이 몇가지 있습니다.
+
 1.1. 닫혀야 하는 태그
 ```
 import React, { Component } from 'react';
@@ -133,9 +134,7 @@ class App extends Component {
  render() {
    return (
     <div>
-      <p>Hello world // 에러발생
       <p>Hello world</p> // 정상작동
-      <input type='text' > 에러발생
       <input type='text' /> // 정상작동
     </div>
    );
@@ -143,18 +142,18 @@ class App extends Component {
 }
 export default App;
 ```
+
 1.2. 감싸져 있는 엘리먼트
 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져있어야 합니다.
 <div 로 해결한 경우>
 ```
-
 import React, { Component } from 'react';
 class App extends Component {
   render() {
     return (
       <div>
-        <p> Hello world</p>
-        <p> Have a Nice day :)</p>
+        <p> Hello world </p>
+        <p> Have a Nice day </p>
       <div>
     );
   }
