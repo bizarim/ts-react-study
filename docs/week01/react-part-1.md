@@ -330,32 +330,32 @@ export default Counter;
 state에 값을 변경 할 때는, this.setState() 메서드를 사용합니다.
 
 
-## 작동순서
+### 작동순서
 conuter.js 에 버튼 클릭하게 되어 this.props.handleIncrese 실행합니다.
 이벤트를 받은 app.js 는 선언되어 있는 handleIncrese 함수실행하여 state에 선언되어 있는 number 값을 변경합니다.
 app.js 내 state 변경으로 conuter.js에 전달하는 props 값이 변경됩니다.
 conuter.js에서 변경된 props 값을 받은 후 변경된 화면을 노출시킵니다.
 
-3. 라이프사이클(생명주기)
+#### 3. 라이프사이클(생명주기)
 라이프사이클은 리액트에서 컴포넌트가 생성되고 업데이트되고 소멸될 때까지 일련의 과정을 의미합니다.
 리액트가 실행되는 특정시점에 사용자가 어떤 기능을 추가 하고 싶을때 LifeCycle API를 사용해서 기능을 추가 할 수 있습니다.
 [마운트 - 업데이트- 언마운트] 총 세 단계로 크게 나눌수 있습니다.
 
-3.1. 컴포넌트를 생성할 때(Mount)
+#### 3.1. 컴포넌트를 생성할 때(Mount)
 constructor() => componentWillMount() => render() => componentDidMount()
 constructor() : 생성자 메소드로 컴포넌트가 생성될 때 단 한번만 실행되며, 이 메소드에서만 state를 설정할 수 있습니다.
 componentWillMount() : 리액트 엘리먼트를 실제 DOM 노드에 추가하기 직전에 호출되는 메소드입니다. 아직 DOM이 생성되지 않았으므로 DOM을 조작할 수 없고, render가 호출되기 전이기 때문에 setState를 사용해도 render가 호출하지 않습니다.
 render() : 컴포넌트 렌더링을 담당합니다.
 componentDidMount() : 컴포넌트가 만들어지고 render가 호출된 이후에 호출되는 메소드입니다.
 
-3.2. 컴포넌트를 변경할 때(Update)
+#### 3.2. 컴포넌트를 변경할 때(Update)
 componentWillReceiveProps() => shouldComponentUpdate() => componentWillUpdate() 
 => render() => componentDidupdate()
 componentWillReceiveProps() : 컴포넌트 생성후에 첫 렌더링을 마친 후 호출되는 메서드입니다. props를 받아서 state를 변경해야 하는 경우 유용합니다.
 shouldComponentUpdate() : 컴포넌트 변경전에 호출되는 메소드입니다. props 또는 state가 변경되었을 때, 재렌더링을 여부를 return 값으로 결정하게됩니다.
 componentWillUpdate() : shouldComponentUpdate가 불린 이후에 컴포넌트 변경 전에서 호출되는 메소드입니다. 새로운 props 또는 state가 반영되기 직전 변경 된 값들을 받습니다.
 
-3.3. 컴포넌트를 제거 할 때(Unmount)
+#### 3.3. 컴포넌트를 제거 할 때(Unmount)
 componentWillUnmount()
 componentWillUnmount() : 컴포넌트가 소멸된 시점에 (DOM에서 삭제된 후) 실행되는 메소드로, 컴포넌트 내부에서 타이머나 비동기 API를 사용하고 있을 때, 이를 제거하기에 유용합니다.
 실제 코드에서는 constructor, render, componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillUnmount 여섯가지 API 위주로 관리하고 있고, 당장 이해 되지 않더라도 괜찮습니다.
