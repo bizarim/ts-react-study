@@ -360,3 +360,4 @@ componentWillUnmount()
 componentWillUnmount() : 컴포넌트가 소멸된 시점에 (DOM에서 삭제된 후) 실행되는 메소드로, 컴포넌트 내부에서 타이머나 비동기 API를 사용하고 있을 때, 이를 제거하기에 유용합니다.
 실제 코드에서는 constructor, render, componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillUnmount 여섯가지 API 위주로 관리하고 있고, 당장 이해 되지 않더라도 괜찮습니다.
 
+출처: https://medium.com/hivelab-dev/react-js-tutorial-part1-c632e34fc32
