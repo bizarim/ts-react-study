@@ -148,7 +148,7 @@ export default App;
 <div 로 해결한 경우>
 ```
 
-import React, { Component } from ‘react’;
+import React, { Component } from 'react';
 class App extends Component {
   render() {
     return (
