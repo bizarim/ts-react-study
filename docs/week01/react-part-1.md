@@ -145,7 +145,7 @@ export default App;
 
 1.2. 감싸져 있는 엘리먼트
 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져있어야 합니다.
-<div 로 해결한 경우>
+[div 로 해결한 경우]
 ```
 import React, { Component } from 'react';
 class App extends Component {
@@ -160,7 +160,7 @@ class App extends Component {
 }
 export default App;
 ```
-<Fragment 로 해결한 경우>
+[Fragment 로 해결한 경우]
 ```
 // 리액트를 불러올 때 Component와 함께 Fragment도 불러와야 함
 import React, { Component, Fragment } from ‘react’;
