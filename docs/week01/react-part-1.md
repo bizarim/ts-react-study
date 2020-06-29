@@ -12,12 +12,12 @@ Virtual DOM 사용으로 인해 속도가 빠릅니다.
 페이스북이 리액트를 발표할 때 사용한 캐치프레이즈, 자바스크립트와 리액트의 간단한 개념만 알면 웹, 앱이 모두 개발 가능합니다.
 리액트는 자바스크립트 친화적이며, 불변성 관리에 초점을 두고 있는 도구입니다.
 이미 많은 회사들(넷플릭스, 에어비엔비 및 국내 다양한 업체)이 사용하고 있기 때문에 다양한 라이브러리가 존재하고, 질문과 답변이 활발하게 이루어집니다.
+
 ## 리액트의 특징
 1. 컴포넌트(Component) 구조
 리액트는 모든 것이 컴포넌트입니다. 컴포넌트는 레고 블록과 같이 작은 단위로 만들어서 그것들을 조립하듯이 개발할 수 있게 해주기 때문에 캡슐화, 확장성, 결합성, 재사용성 등과 같은 이점이 있습니다.
 2. 단방향 데이터 흐름
 리액트에서는 부모 컴포넌트와 자식 컴포넌트간에 데이터를 전달할수 있는데, 데이터를 전달할 때 부모에서 자식에게로만 데이터가 전달이 가능합니다.
-
 3. ECMAScript 6
 리액트 개발에서는 ES6문법을 사용하고있습니다.
 let
@@ -42,9 +42,11 @@ console.log(a); // 100 출력
 ```
 const
 변경할 수 없는 변수로, 값을 재할당 할 필요가 없는 경우 사용합니다. 변수와 달리 선언 시에 반드시 초기값을 할당해줘야 하며, 스코프 범위는 let과 동일하게 블록 레벨입니다.
+```
 const MY_NAME; // 초기값 할당하지 않아 SyntaxError발생
 const MY_NAME = 'Kim';
 MY_NAME = 'Lee'; // 값을 변경하려 하면 TypeError발생
+```
 화살표 함수(Arrow function)
 함수표기 구문을 화살표 => 로 하여 구문을 짧게 줄여줍니다.
 ```
@@ -145,7 +147,8 @@ export default App;
 
 1.2. 감싸져 있는 엘리먼트
 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져있어야 합니다.
-[div 로 해결한 경우]
+
+- div 로 해결한 경우
 ```
 import React, { Component } from 'react';
 class App extends Component {
@@ -160,7 +163,7 @@ class App extends Component {
 }
 export default App;
 ```
-[Fragment 로 해결한 경우]
+- Fragment 로 해결한 경우
 ```
 // 리액트를 불러올 때 Component와 함께 Fragment도 불러와야 함
 import React, { Component, Fragment } from ‘react’;
@@ -176,6 +179,7 @@ class App extends Component {
 }
 export default App;
 ```
+
 1.3. JSX 안에 자바스크립트 값 사용
 ```
 import React, { Component } from 'react';
@@ -191,6 +195,7 @@ class App extends Component {
 }
 export default App;
 ```
+
 1.4. CSS 작성 : 인라인 스타일
 리액트는 자바스크립트로 작성하기 때문에 아래처럼 style속성값에 일반 문자열이 아닌 자바스크립트 객체가 할당되어야 합니다.
 그리고 font-size와 같이 중간에 대시 기호(-)가 들어간 속성명은 fontSize와 같이 카멜케이스로 바꿔줘야합니다. (유지보수나 성능의 이슈가 있어 권장되지 않는 방법입니다.)
@@ -214,6 +219,7 @@ class App extends Component {
 }
 export default App;
 ```
+
 1.5. CSS 작성 : 외부파일 불러오기
 별도의 파일에 스타일을 정의해놓고, 리액트 컴포넌트 파일에서 정의한 css파일을 import합니다.
 ```
@@ -227,10 +233,12 @@ return (
 ```
 React DOM은 HTML 어트리뷰트(attribute) 이름 대신 캐멀케이(camelCase)를 네이밍 컨벤션으로 사용합니다. 예를 들어, JSX에서 tabindex는 tabIndex로 작성합니다.
 class 어트리뷰트는 JavaScript의 예약어이므로 className으로 작성합니다.
+
 2. Props 와 State
 2.1. Props
 부모 컴포넌트로부터 자식컴포넌트가 물려받는 속성, 다시 말해 Props를 이용해서 부모 컴포넌트가 자식 컴포넌트에 데이터를 전달합니다.
 부모에서 받아온 Props는 자식에서 수정이 불가능한데, 이유는 단방향 데이터 흐름을 지키기 위해 강제로 정해진 것이기 때문입니다.
+
 src/App.js
 App.js에서 자식 컴포넌트인 Hello 컴포넌트에게 보낼 속성을 정의합니다.
 ```
@@ -262,6 +270,7 @@ class Hello extends Component {
     }
 }
 ```
+
 2.2. State
 State는 컴포넌트 내에서 동적으로 변동되는 데이터를 관리하며, 언제나 기본 값을 미리 설정해야 사용할 수 있습니다.
 버튼 클릭으로 숫자가 증가하는 Counter 예제를 보겠습니다.
@@ -320,7 +329,8 @@ export default Counter;
 ```
 state에 값을 변경 할 때는, this.setState() 메서드를 사용합니다.
 
-작동순서
+
+## 작동순서
 conuter.js 에 버튼 클릭하게 되어 this.props.handleIncrese 실행합니다.
 이벤트를 받은 app.js 는 선언되어 있는 handleIncrese 함수실행하여 state에 선언되어 있는 number 값을 변경합니다.
 app.js 내 state 변경으로 conuter.js에 전달하는 props 값이 변경됩니다.
